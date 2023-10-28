@@ -1,0 +1,183 @@
+:root{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.6rem;
+
+    border: none;
+    border-radius: 0;
+    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+
+    transition: all 0.1s ease;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+}
+
+.ToDo{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #eee;
+}
+
+    .Painel{
+        width: 480px;
+        height: 90%;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        /* background-color: #fff; */
+    }
+
+        .Form{
+            width: 100%;
+            height: 5rem;
+
+            /* background-color: #000; */
+        }
+
+            .TaskNameInput{
+                border-left: 3px solid black;
+
+                width: calc(100% - 2 * 1rem);
+                height: calc(100% - 2 * 1rem);
+
+                padding: 1rem;
+    
+                /* background-color: #ccc; */
+
+                background-color: transparent;
+
+                font-size: 2.6rem;
+            }
+
+        .Tasks{
+            width: 100%;
+            height: calc(100% - 5rem);
+
+            overflow-y: auto;
+
+            /* background-color: #000; */
+        }
+        
+        .Tasks::-webkit-scrollbar {
+            display: none;
+        }
+          
+        .Tasks {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        .Tasks > *{
+            margin-bottom: 1rem;
+        }
+
+        .Tasks > *:last-child{
+            margin-bottom: 0;
+        }
+
+            .Task{
+                width: 100%;
+                height: 5rem;
+    
+                /* background-color: #ccc; */
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: nowrap;
+        
+            }
+
+            .Task > *{
+                /* background-color: #fff; */
+            }
+
+                .CompletTask{
+                    width: 5rem;
+                    height: 5rem;
+    
+                    /* background-color: #888; */
+                }
+
+                    .CompletTask > i{
+                        font-size: 2.6rem;
+                    }
+
+                .NameTask{
+                    width: calc(100% - 5rem - 5rem - 2 * 1rem);
+                    height: calc(100% - 2 * 1rem);
+
+                    padding: 1rem;
+
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-wrap: nowrap;
+    
+                    /* background-color: #888; */
+                }
+
+                    .NameTaskText{
+                        width: 100%;
+                        height: 100%;
+
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+    
+                        font-size: 2.6rem;
+                    }
+
+                .DeleteTask{
+                    width: 5rem;
+                    height: 5rem;
+    
+                    /* background-color: #888; */
+                }
+
+                    .DeleteTask > i{
+                        font-size: 2.6rem;
+                    }
+
+
+.blink{
+    animation: blink 1.25s infinite;
+}
+    
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
